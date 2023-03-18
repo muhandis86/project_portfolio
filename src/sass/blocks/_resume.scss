@@ -1,0 +1,82 @@
+.resume {
+    margin-top: 120px;
+    &__wrapper {
+        padding: 60px 77px 0 77px;
+        display: grid;
+        grid-template-columns: repeat(2, 425px);
+        column-gap: 136px;
+    }
+    &__column {
+        &-title {
+            position: relative;
+            padding-left: 50px;
+            &:before {
+                content: '';
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background: $main-color;
+                border-radius: 100%;
+                left: -1px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 0;
+            li {
+                position: relative;
+                &:after {
+                    content: '';
+                    width: 1px;
+                    height: calc(100% + 16px);
+                    position: absolute;
+                    top: -8px;
+                    left: 6px;
+                    background-color: #000;
+                }
+            }
+        }
+    }
+    &__item {
+        padding: 45px 0 0 43px;
+        position: relative;
+        &:before {
+            content: "";
+            height: 1px;
+            width: 37px;
+            position: absolute;
+            top: 64px;
+            left: 6px;
+            background-color: #000;
+        }
+        &-head {
+            position: relative;
+            padding-left: 56px;
+            h4 {
+                margin-bottom: 0;
+            }
+            @include before_circle;
+            &:before {
+                top: 0;
+            }
+        }
+        &-icon {
+            position: absolute;
+            top: 14px;
+            left: 18px;
+        }
+        &-body {
+            margin-top: 12px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &-location {
+            font-size: 12px;
+            line-height: 18px;
+            margin-top: 5px;
+        }
+    }
+}
